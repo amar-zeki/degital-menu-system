@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Ambroisie | Premium Digital Culinary Experience</title>
+  <meta name="description" content="Immerse yourself in a luxury digital menu selection of exquisite gourmet culinary delights at L'Ambroisie.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-theme">
+
+  <!-- 1. Welcoming Landing Page Overlay -->
+  <div id="welcome-page">
+    <div class="welcome-ambient-glow"></div>
+    <div class="welcome-content">
+      <img class="welcome-logo" src="images/logo.jpg" alt="L'Ambroisie Logo">
+      <h1 class="welcome-title">L'Ambroisie</h1>
+      <h2 class="welcome-subtitle">Haute Cuisine Royale</h2>
+      <button id="enter-menu-btn" class="welcome-btn" aria-label="Enter Digital Menu">View Menu</button>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Navigation Header -->
+  <header id="main-header">
+    <div class="brand-container">
+      <img class="header-logo" src="images/logo.jpg" alt="L'Ambroisie Logo">
+      <span class="header-title">L'Ambroisie</span>
+    </div>
+    
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#hero-showcase">Welcome</a></li>
+        <li><a href="#menu-section">Our Menu</a></li>
+        <li><a href="#reviews-section">Critiques</a></li>
+        <li><a href="#info-section">L'Atelier</a></li>
+        <li><a href="#contact-section">Reservations</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="action-btn" id="theme-toggle" aria-label="Switch Theme">☀️</button>
+      
+      <!-- QR Trigger -->
+      <button class="action-btn" id="qr-toggle-btn" aria-label="Show QR Code">📱</button>
+
+      <!-- Cart FAB (Header Action) -->
+      <button class="action-btn" id="cart-toggle-btn" aria-label="View Shopping Cart">
+        🛒
+        <span id="cart-badge">0</span>
+      </button>
+
+      <!-- Hamburger menu (Mobile) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Open Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section (Slides / Showcase) -->
+  <section id="hero-showcase">
+    <h2 class="hero-showcase-title">L'Ambroisie</h2>
+    <span class="hero-showcase-subtitle">Futuristic Luxury Dining</span>
+  </section>
+
+  <!-- 4. Main Menu & Category Section -->
+  <section id="menu-section" class="menu-section">
+    <h2 class="section-title">Chef's Selection</h2>
+    
+    <!-- Controls (Search and Filters trigger) -->
+    <div class="menu-controls">
+      <div class="search-box-container">
+        <button class="search-icon-btn" aria-label="Search Submit">🔍</button>
+        <input class="search-input" type="text" id="search-input" placeholder="Search by name, description, ingredients...">
+        <button class="search-clear" id="search-clear" aria-label="Clear Search">&times;</button>
+      </div>
+      
+      <button class="filter-btn-trigger" id="filter-toggle-btn">
+        <span>Filters</span> ⚙️
+      </button>
+    </div>
+
+    <!-- Category Scrollable Row -->
+    <div class="category-scroller-container">
+      <div class="category-scroller" id="category-tabs">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Food Cards Grid -->
+    <div class="food-grid" id="food-grid">
+      <!-- Rendered dynamically (or skeletons initially) -->
+    </div>
+  </section>
+
+  <!-- 5. Reviews Critiques Section -->
+  <section id="reviews-section" class="reviews-section">
+    <h2 class="section-title">Epicurean Critiques</h2>
+    <div class="reviews-carousel" id="reviews-carousel">
+      <!-- Rendered dynamically -->
+    </div>
+  </section>
+
+  <!-- 6. Counters Section -->
+  <section id="counters-section" class="counters-section">
+    <div class="counter-card">
+      <div class="counter-val-wrapper"><span class="counter-val" data-target="15000">0</span>+</div>
+      <div class="counter-label">Happy Guests</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-val-wrapper"><span class="counter-val" data-target="3">0</span></div>
+      <div class="counter-label">Michelin Stars</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-val-wrapper"><span class="counter-val" data-target="42">0</span>+</div>
+      <div class="counter-label">Luxury Dishes</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-val-wrapper"><span class="counter-val" data-target="18">0</span></div>
+      <div class="counter-label">Culinary Awards</div>
+    </div>
+  </section>
+
+  <!-- 7. Restaurant Info / Map Section -->
+  <section id="info-section" class="info-section">
+    <div class="info-grid">
+      <div class="info-details-column">
+        <div class="info-header">
+          <h3 class="info-restaurant-name">L'Ambroisie Atelier</h3>
+          <span class="info-restaurant-tagline">Excellence in Gastronomy</span>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <span class="info-label">Address</span>
+            <span class="info-val">742 Evergreen Terrace, Luxury District, NY 10021</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <span class="info-label">Reservations Line</span>
+            <span class="info-val">+1 (555) 789-1234</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-text">
+            <span class="info-label">General Inquiry</span>
+            <span class="info-val">reservations@lambroisie-luxury.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕒</div>
+          <div class="info-text">
+            <span class="info-label">Opening Hours</span>
+            <div class="hours-list">
+              <div class="hours-row"><span>Mon - Thu</span> <span>17:00 - 23:00</span></div>
+              <div class="hours-row"><span>Fri - Sat</span> <span>17:00 - 01:00</span></div>
+              <div class="hours-row"><span>Sunday</span> <span>16:00 - 22:00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a class="social-icon" href="#" aria-label="Instagram">📸</a>
+          <a class="social-icon" href="#" aria-label="Facebook">👤</a>
+          <a class="social-icon" href="#" aria-label="Twitter">🕊️</a>
+          <a class="social-icon" href="#" aria-label="Tripadvisor">🦉</a>
+        </div>
+      </div>
+
+      <!-- Styled Map Placeholder -->
+      <div class="map-column">
+        <div class="map-placeholder-bg"></div>
+        <div class="map-content">
+          <div class="map-marker">📍</div>
+          <h4 class="map-location-title">L'Ambroisie Manhattan</h4>
+          <p class="map-location-desc">Located in the heart of Upper East Side, facing Central Park.</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="directions-btn">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Reservation Form Section -->
+  <section id="contact-section" class="contact-section">
+    <h2 class="section-title">Valet Reservation & Inquiries</h2>
+    <div class="contact-container">
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="contact-name">Your Full Name</label>
+          <input class="form-input" type="text" id="contact-name" placeholder="Lord / Lady Arthur Pendelton" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact-phone">Contact Number</label>
+          <input class="form-input" type="tel" id="contact-phone" placeholder="+1 (555) 789-1234" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact-email">Email Address</label>
+          <input class="form-input" type="email" id="contact-email" placeholder="client@luxury.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact-message">Special Culinary Notes / Inquiries</label>
+          <textarea class="form-input" id="contact-message" placeholder="Please detail dietary restrictions, seating preferences (e.g., terrace), or special occasions..." required></textarea>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 9. Cart Sliding Drawer -->
+  <div class="overlay" id="cart-overlay"></div>
+  <div class="drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Selected Delicacies</h3>
+      <button class="drawer-close" id="close-cart-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="cart-items" id="cart-items">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>V.A.T (10%)</span>
+        <span id="cart-tax">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Service Charge (5%)</span>
+        <span id="cart-service">$0.00</span>
+      </div>
+      <div class="cart-summary-row grand-total">
+        <span>Total Sum</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-drawer-buttons">
+        <button class="cart-btn clear-btn" id="clear-cart-btn">Clear</button>
+        <button class="cart-btn checkout-btn" id="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Filters Sliding Drawer -->
+  <div class="overlay" id="filter-overlay"></div>
+  <div class="drawer" id="filter-drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Refine Selection</h3>
+      <button class="drawer-close" id="close-filter-btn" aria-label="Close Filters">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Price Limit -->
+      <div class="filter-group">
+        <h4 class="filter-group-title">Maximum Budget</h4>
+        <div class="price-slider-container">
+          <input class="range-input" type="range" id="filter-price-slider" min="5" max="60" value="60">
+          <div class="price-range-info">
+            <span>$5</span>
+            <span id="filter-price-val">$60</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specific Badges -->
+      <div class="filter-group">
+        <h4 class="filter-group-title">Dietary & Style</h4>
+        
+        <div class="toggle-item">
+          <div class="toggle-label">
+            <span class="toggle-label-title">Vegetarian</span>
+            <span class="toggle-label-desc">Only display plant-based creations</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="filter-veg">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-item">
+          <div class="toggle-label">
+            <span class="toggle-label-title">Spicy Pleasures</span>
+            <span class="toggle-label-desc">Include dishes with spice profiles</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="filter-spicy">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-item">
+          <div class="toggle-label">
+            <span class="toggle-label-title">Michelin Popular</span>
+            <span class="toggle-label-desc">Popular guest recommendations</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="filter-popular">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-item">
+          <div class="toggle-label">
+            <span class="toggle-label-title">New Arrivals</span>
+            <span class="toggle-label-desc">L'Ambroisie fresh creations</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="filter-new">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <div class="cart-drawer-buttons">
+        <button class="cart-btn clear-btn" id="reset-filters-btn">Reset</button>
+        <button class="cart-btn checkout-btn" id="apply-filters-btn">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. Food Details Modal Popup -->
+  <div class="modal-overlay" id="details-overlay"></div>
+  <div class="modal-container" id="details-modal">
+    <button class="modal-close-btn" id="close-modal-btn" aria-label="Close Details Modal">&times;</button>
+    <div class="modal-body">
+      <div class="modal-grid">
+        <div class="modal-img-wrapper">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-content-wrapper">
+          <div class="modal-title-row">
+            <h3 class="modal-title" id="modal-title">Food Item</h3>
+          </div>
+          <div class="modal-meta-row">
+            <span class="modal-price" id="modal-price">$0.00</span>
+            <span class="modal-rating-text" id="modal-rating">★ 4.9 (24 Reviews)</span>
+          </div>
+          <p class="modal-desc" id="modal-desc">Detailed item description goes here.</p>
+
+          <div class="modal-specs">
+            <div class="spec-item">
+              <span class="spec-label">Est. Calories</span>
+              <span class="spec-val" id="modal-calories">000 kcal</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Cooking Time</span>
+              <span class="spec-val" id="modal-time">00 min</span>
+            </div>
+          </div>
+
+          <div class="modal-lists">
+            <div>
+              <h4 class="modal-list-title">Ingredients</h4>
+              <ul id="modal-ingredients">
+                <!-- Rendered dynamically -->
+              </ul>
+            </div>
+            <div>
+              <h4 class="modal-list-title">Allergens</h4>
+              <ul id="modal-allergens">
+                <!-- Rendered dynamically -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Quantity / Buy selectors -->
+          <div class="modal-action-row">
+            <div class="modal-qty-container">
+              <button class="modal-qty-btn" id="modal-dec-qty">-</button>
+              <span class="modal-qty-val" id="modal-qty-val">1</span>
+              <button class="modal-qty-btn" id="modal-inc-qty">+</button>
+            </div>
+            <button class="modal-add-btn" id="modal-add-cart-btn">Add to Selection</button>
+          </div>
+
+          <!-- Customer Reviews section -->
+          <div class="modal-reviews-section">
+            <h4 class="modal-reviews-title">Gastronomic Appraisals</h4>
+            <div class="modal-reviews-list" id="modal-reviews-list">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. QR Code Viewer Modal -->
+  <div class="modal-overlay" id="qr-overlay"></div>
+  <div class="modal-container" id="qr-modal" style="max-width: 400px;">
+    <button class="modal-close-btn" id="close-qr-btn" aria-label="Close QR Modal">&times;</button>
+    <div class="qr-modal-body">
+      <h3 class="modal-title">Mobile Menu Sync</h3>
+      <p class="qr-desc" style="margin-top: 0.5rem;">Scan with your mobile camera to take L'Ambroisie with you.</p>
+      
+      <!-- Premium inline golden SVG QR Code -->
+      <div class="qr-code-wrapper">
+        <svg width="200" height="200" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background QR blocks -->
+          <rect width="29" height="29" fill="#FFFFFF"/>
+          <path d="M0 0h9v9H0V0zm1 1v7h7V1H1zm1 1h5v5H2V2zm8-2h1v1h-1V0zm2 0h2v1h-2V0zm4 0h1v1h-1V0zm1 0h2v2h-1v-1h-1V0zm2 0h1v3h-1V0zm1 0h1v1h-1V0zm-9 2h1v1h-1V2zm4 0h1v1h-1V2zm1 0h1v1h-1V2zm-9 7h1v1h-1V9zm6 0h1v1h-1V9zm6 0h1v1h-1V9zm2 0h1v1h-1V9zm2 0h1v1h-1V9zm-16 1h9v9H0v-9zm1 1v7h7V11H1zm1 1h5v5H2v-5zm17-2h1v1h-1v-1zm1 0h2v1h-2v-1zm4 0h1v1h-1v-1zm-9 2h1v1h-1v-1zm2 0h1v1h-1v-1zm5 0h1v1h-1v-1zm2 0h1v1h-1v-1zm-10 2h2v1h-2v-1zm3 0h1v1h-1v-1zm4 0h1v1h-1v-1zm-8 2h1v2h-1v-2zm2 0h1v1h-1v-1zm1 0h2v1h-2v-1zm4 0h1v1h-1v-1zm-8 2h1v1h-1v-1zm4 0h1v1h-1v-1zm2 0h1v1h-1v-1zm-9 2h1v1h-1v-1zm6 0h1v1h-1v-1zm2 0h1v1h-1v-1zm3 0h1v1h-1v-1zm2 0h1v1h-1v-1zm-14 2h1v1h-1v-1zm3 0h2v1h-2v-1zm5 0h1v1h-1v-1zm1 0h2v1h-2v-1zm5 0h1v1h-1v-1z" fill="#000000"/>
+          <!-- Gold corners -->
+          <rect x="0" y="0" width="9" height="9" fill="none" stroke="#d4af37" stroke-width="0.5"/>
+          <rect x="0" y="20" width="9" height="9" fill="none" stroke="#d4af37" stroke-width="0.5"/>
+          <rect x="20" y="0" width="9" height="9" fill="none" stroke="#d4af37" stroke-width="0.5"/>
+        </svg>
+      </div>
+      
+      <p class="qr-desc">URL: <code>https://lambroisie.menu</code></p>
+    </div>
+  </div>
+
+  <!-- 13. Dynamic Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- 14. Floating UI controls -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">▲</button>
+
+  <!-- JS Scripts inclusion (Dependencies first) -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
