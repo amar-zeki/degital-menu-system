@@ -142,7 +142,9 @@ body {
   border: 2px solid var(--gold-primary);
   margin-bottom: 2rem;
   box-shadow: 0 0 25px var(--gold-glow);
-  object-fit: cover;
+  background-color: #ffffff;
+  padding: 4px;
+  object-fit: contain;
 }
 
 .welcome-title {
@@ -239,7 +241,9 @@ body {
   height: 45px;
   border-radius: 50%;
   border: 1px solid var(--gold-primary);
-  object-fit: cover;
+  background-color: #ffffff;
+  padding: 2px;
+  object-fit: contain;
 }
 
 .header-title {

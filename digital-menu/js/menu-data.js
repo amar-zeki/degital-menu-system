@@ -315,12 +315,12 @@ const MENU_DATA = {
     }
   ],
   restaurantInfo: {
-    name: "L'Ambroisie",
-    tagline: "Futuristic Luxury Dining",
+    name: "Best Coffee And FAST FOOD",
+    tagline: "Premium Taste & Quality",
     logo: "images/logo.jpg",
     heroBg: "images/hero.jpg",
     phone: "+1 (555) 789-1234",
-    email: "reservations@lambroisie-luxury.com",
+    email: "reservations@bestcoffeeandfastfood.com",
     address: "742 Evergreen Terrace, Luxury District, NY 10021",
     hours: [
       { days: "Mon - Thu", time: "17:00 - 23:00" },
