@@ -2023,3 +2023,114 @@ textarea.form-input {
   font-size: 0.9rem;
   font-weight: 500;
 }
+
+/* Active Table Badge in Header */
+.active-table-badge {
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: none; /* Hidden by default, toggled in JS */
+}
+
+.active-table-badge.visible {
+  display: inline-block;
+}
+
+/* Language selector dropdown style */
+.lang-select-dropdown {
+  background: var(--bg-glass-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 6px 10px;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-select-dropdown:hover {
+  border-color: var(--gold-primary);
+}
+
+.lang-select-dropdown option {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* RTL Layout support for Arabic */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .drawer {
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+  border-right: 1px solid var(--border-color);
+  border-left: none;
+}
+
+html[dir="rtl"] .drawer.open {
+  transform: translateX(0);
+}
+
+html[dir="rtl"] .modal-close-btn {
+  left: 1.25rem;
+  right: auto;
+}
+
+html[dir="rtl"] .cart-item-remove-btn {
+  left: 12px;
+  right: auto;
+}
+
+html[dir="rtl"] #toast-container {
+  right: 2rem;
+  left: auto;
+}
+
+html[dir="rtl"] .filter-group-title {
+  border-right: 2px solid var(--gold-primary);
+  border-left: none;
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .modal-list-title {
+  border-right: 2px solid var(--gold-primary);
+  border-left: none;
+  padding-right: 6px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .spec-item {
+  border-left: 1px solid var(--border-color);
+  border-right: none;
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .spec-item:last-child {
+  border-left: none;
+}
+
+/* Fix flex margins in RTL */
+html[dir="rtl"] .brand-container {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .header-actions {
+  flex-direction: row;
+}
+

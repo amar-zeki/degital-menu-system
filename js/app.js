@@ -121,6 +121,23 @@ const App = {
     `).join('');
 
     setTimeout(() => {
+      // Re-apply language translations to data model before rendering
+      // This prevents the skeleton-delayed render from overwriting translated names
+      const activeLang = localStorage.getItem('lang') || 'en';
+      if (window.TRANSLATIONS && window.MENU_DATA && activeLang !== 'en') {
+        const t = window.TRANSLATIONS[activeLang];
+        if (t) {
+          window.MENU_DATA.categories.forEach(cat => {
+            if (t.categories && t.categories[cat.id]) cat.name = t.categories[cat.id];
+          });
+          window.MENU_DATA.items.forEach(item => {
+            if (t.foods && t.foods[item.id]) {
+              item.name = t.foods[item.id].name;
+              item.description = t.foods[item.id].description;
+            }
+          });
+        }
+      }
       this.renderFoodGrid();
     }, 800);
   },
@@ -183,7 +200,7 @@ const App = {
               </div>
             </div>
             <button class="add-to-cart-btn-grid" onclick="Cart.addItem('${item.id}')">
-              Add to Cart 🛒
+              ${(window.TRANSLATIONS && window.TRANSLATIONS[localStorage.getItem('lang') || 'en'] && window.TRANSLATIONS[localStorage.getItem('lang') || 'en'].add_to_cart) || 'Add to Cart 🛒'}
             </button>
           </div>
         </div>

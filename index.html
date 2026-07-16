@@ -18,9 +18,9 @@
     <div class="welcome-ambient-glow"></div>
     <div class="welcome-content">
       <img class="welcome-logo" src="images/logo.jpg" alt="L'Ambroisie Logo">
-      <h1 class="welcome-title" style="font-size: 2.2rem;">Best Coffee And FAST FOOD</h1>
-      <h2 class="welcome-subtitle">Premium Taste & Quality</h2>
-      <button id="enter-menu-btn" class="welcome-btn" aria-label="Enter Digital Menu">View Menu</button>
+      <h1 class="welcome-title" style="font-size: 2.2rem;" data-i18n="welcome_title">Best Coffee And FAST FOOD</h1>
+      <h2 class="welcome-subtitle" data-i18n="welcome_subtitle">Premium Taste & Quality</h2>
+      <button id="enter-menu-btn" class="welcome-btn" aria-label="Enter Digital Menu" data-i18n="view_menu">View Menu</button>
     </div>
   </div>
 
@@ -28,23 +28,37 @@
   <header id="main-header">
     <div class="brand-container">
       <img class="header-logo" src="images/logo.jpg" alt="L'Ambroisie Logo">
-      <span class="header-title" style="font-size: 1.15rem;">Best Coffee And FAST FOOD</span>
+      <span class="header-title" style="font-size: 1.15rem;" data-i18n="welcome_title">Best Coffee And FAST FOOD</span>
     </div>
     
     <nav class="nav-menu" id="nav-menu">
       <ul class="nav-links">
-        <li><a href="#hero-showcase">Welcome</a></li>
-        <li><a href="#menu-section">Our Menu</a></li>
-        <li><a href="#reviews-section">Critiques</a></li>
-        <li><a href="#info-section">L'Atelier</a></li>
-        <li><a href="#contact-section">Reservations</a></li>
+        <li><a href="#hero-showcase" data-i18n="nav_welcome">Welcome</a></li>
+        <li><a href="#menu-section" data-i18n="nav_menu">Our Menu</a></li>
+        <li><a href="#reviews-section" data-i18n="nav_critiques">Critiques</a></li>
+        <li><a href="#info-section" data-i18n="nav_atelier">L'Atelier</a></li>
+        <li><a href="#contact-section" data-i18n="nav_reservations">Reservations</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
+      <!-- Active Table Badge -->
+      <span id="active-table-badge" class="active-table-badge"></span>
+
+      <!-- Language Selector -->
+      <select id="lang-select" class="lang-select-dropdown" aria-label="Select Language">
+        <option value="en">🇬🇧 EN</option>
+        <option value="am">🇪🇹 አማ</option>
+        <option value="om">🇪🇹 ORO</option>
+        <option value="ar">🇸🇦 عرب</option>
+      </select>
+
       <!-- Theme toggle -->
       <button class="action-btn" id="theme-toggle" aria-label="Switch Theme">☀️</button>
       
+      <!-- QR Scanner Camera Trigger -->
+      <button class="action-btn" id="qr-scan-btn" aria-label="Scan QR Code">📷</button>
+
       <!-- QR Trigger -->
       <button class="action-btn" id="qr-toggle-btn" aria-label="Show QR Code">📱</button>
 
@@ -65,24 +79,24 @@
 
   <!-- 3. Hero Section (Slides / Showcase) -->
   <section id="hero-showcase">
-    <h2 class="hero-showcase-title" style="font-size: 3rem;">Best Coffee And FAST FOOD</h2>
-    <span class="hero-showcase-subtitle">Premium Taste & Quality</span>
+    <h2 class="hero-showcase-title" style="font-size: 3rem;" data-i18n="welcome_title">Best Coffee And FAST FOOD</h2>
+    <span class="hero-showcase-subtitle" data-i18n="welcome_subtitle">Premium Taste & Quality</span>
   </section>
 
   <!-- 4. Main Menu & Category Section -->
   <section id="menu-section" class="menu-section">
-    <h2 class="section-title">Chef's Selection</h2>
+    <h2 class="section-title" data-i18n="chefs_selection">Chef's Selection</h2>
     
     <!-- Controls (Search and Filters trigger) -->
     <div class="menu-controls">
       <div class="search-box-container">
         <button class="search-icon-btn" aria-label="Search Submit">🔍</button>
-        <input class="search-input" type="text" id="search-input" placeholder="Search by name, description, ingredients...">
+        <input class="search-input" type="text" id="search-input" placeholder="Search by name, description, ingredients..." data-i18n-placeholder="search_placeholder">
         <button class="search-clear" id="search-clear" aria-label="Clear Search">&times;</button>
       </div>
       
       <button class="filter-btn-trigger" id="filter-toggle-btn">
-        <span>Filters</span> ⚙️
+        <span data-i18n="filters_btn">Filters</span> ⚙️
       </button>
     </div>
 
@@ -101,7 +115,7 @@
 
   <!-- 5. Reviews Critiques Section -->
   <section id="reviews-section" class="reviews-section">
-    <h2 class="section-title">Epicurean Critiques</h2>
+    <h2 class="section-title" data-i18n="epicurean_critiques">Epicurean Critiques</h2>
     <div class="reviews-carousel" id="reviews-carousel">
       <!-- Rendered dynamically -->
     </div>
@@ -111,19 +125,19 @@
   <section id="counters-section" class="counters-section">
     <div class="counter-card">
       <div class="counter-val-wrapper"><span class="counter-val" data-target="15000">0</span>+</div>
-      <div class="counter-label">Happy Guests</div>
+      <div class="counter-label" data-i18n="happy_guests">Happy Guests</div>
     </div>
     <div class="counter-card">
       <div class="counter-val-wrapper"><span class="counter-val" data-target="3">0</span></div>
-      <div class="counter-label">Michelin Stars</div>
+      <div class="counter-label" data-i18n="michelin_stars">Michelin Stars</div>
     </div>
     <div class="counter-card">
       <div class="counter-val-wrapper"><span class="counter-val" data-target="42">0</span>+</div>
-      <div class="counter-label">Luxury Dishes</div>
+      <div class="counter-label" data-i18n="luxury_dishes">Luxury Dishes</div>
     </div>
     <div class="counter-card">
       <div class="counter-val-wrapper"><span class="counter-val" data-target="18">0</span></div>
-      <div class="counter-label">Culinary Awards</div>
+      <div class="counter-label" data-i18n="culinary_awards">Culinary Awards</div>
     </div>
   </section>
 
@@ -132,14 +146,14 @@
     <div class="info-grid">
       <div class="info-details-column">
         <div class="info-header">
-          <h3 class="info-restaurant-name">Best Coffee And FAST FOOD</h3>
-          <span class="info-restaurant-tagline">Premium Taste & Quality</span>
+          <h3 class="info-restaurant-name" data-i18n="atelier_title">Best Coffee And FAST FOOD</h3>
+          <span class="info-restaurant-tagline" data-i18n="atelier_tagline">Premium Taste & Quality</span>
         </div>
 
         <div class="info-item">
           <div class="info-icon">📍</div>
           <div class="info-text">
-            <span class="info-label">Address</span>
+            <span class="info-label" data-i18n="label_address">Address</span>
             <span class="info-val">742 Evergreen Terrace, Luxury District, NY 10021</span>
           </div>
         </div>
@@ -147,7 +161,7 @@
         <div class="info-item">
           <div class="info-icon">📞</div>
           <div class="info-text">
-            <span class="info-label">Reservations Line</span>
+            <span class="info-label" data-i18n="label_reservations">Reservations Line</span>
             <span class="info-val">+1 (555) 789-1234</span>
           </div>
         </div>
@@ -155,15 +169,15 @@
         <div class="info-item">
           <div class="info-icon">✉️</div>
           <div class="info-text">
-            <span class="info-label">General Inquiry</span>
-            <span class="info-val">reservations@lambroisie-luxury.com</span>
+            <span class="info-label" data-i18n="label_inquiry">General Inquiry</span>
+            <span class="info-val">reservations@bestcoffeeandfastfood.com</span>
           </div>
         </div>
 
         <div class="info-item">
           <div class="info-icon">🕒</div>
           <div class="info-text">
-            <span class="info-label">Opening Hours</span>
+            <span class="info-label" data-i18n="label_hours">Opening Hours</span>
             <div class="hours-list">
               <div class="hours-row"><span>Mon - Thu</span> <span>17:00 - 23:00</span></div>
               <div class="hours-row"><span>Fri - Sat</span> <span>17:00 - 01:00</span></div>
@@ -185,9 +199,9 @@
         <div class="map-placeholder-bg"></div>
         <div class="map-content">
           <div class="map-marker">📍</div>
-          <h4 class="map-location-title">Best Coffee And FAST FOOD</h4>
-          <p class="map-location-desc">Located in the heart of the city.</p>
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="directions-btn">Get Directions</a>
+          <h4 class="map-location-title" data-i18n="atelier_title">Best Coffee And FAST FOOD</h4>
+          <p class="map-location-desc" data-i18n="map_location_desc">Located in the heart of the city.</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="directions-btn" data-i18n="directions_btn">Get Directions</a>
         </div>
       </div>
     </div>
@@ -195,30 +209,30 @@
 
   <!-- 8. Reservation Form Section -->
   <section id="contact-section" class="contact-section">
-    <h2 class="section-title">Valet Reservation & Inquiries</h2>
+    <h2 class="section-title" data-i18n="valet_title">Valet Reservation & Inquiries</h2>
     <div class="contact-container">
       <form id="contact-form" novalidate>
         <div class="form-group">
-          <label class="form-label" for="contact-name">Your Full Name</label>
+          <label class="form-label" for="contact-name" data-i18n="form_name">Your Full Name</label>
           <input class="form-input" type="text" id="contact-name" placeholder="Lord / Lady Arthur Pendelton" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="contact-phone">Contact Number</label>
+          <label class="form-label" for="contact-phone" data-i18n="form_phone">Contact Number</label>
           <input class="form-input" type="tel" id="contact-phone" placeholder="+1 (555) 789-1234" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="contact-email">Email Address</label>
+          <label class="form-label" for="contact-email" data-i18n="form_email">Email Address</label>
           <input class="form-input" type="email" id="contact-email" placeholder="client@luxury.com" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="contact-message">Special Culinary Notes / Inquiries</label>
+          <label class="form-label" for="contact-message" data-i18n="form_message">Special Culinary Notes / Inquiries</label>
           <textarea class="form-input" id="contact-message" placeholder="Please detail dietary restrictions, seating preferences (e.g., terrace), or special occasions..." required></textarea>
         </div>
 
-        <button class="submit-btn" type="submit">Submit Request</button>
+        <button class="submit-btn" type="submit" data-i18n="form_submit">Submit Request</button>
       </form>
     </div>
   </section>
@@ -227,7 +241,7 @@
   <div class="overlay" id="cart-overlay"></div>
   <div class="drawer" id="cart-drawer">
     <div class="drawer-header">
-      <h3 class="drawer-title">Selected Delicacies</h3>
+      <h3 class="drawer-title" data-i18n="cart_title">Selected Delicacies</h3>
       <button class="drawer-close" id="close-cart-btn" aria-label="Close Cart">&times;</button>
     </div>
     <div class="drawer-body">
@@ -237,24 +251,24 @@
     </div>
     <div class="drawer-footer">
       <div class="cart-summary-row">
-        <span>Subtotal</span>
+        <span data-i18n="cart_subtotal">Subtotal</span>
         <span id="cart-subtotal">$0.00</span>
       </div>
       <div class="cart-summary-row">
-        <span>V.A.T (10%)</span>
+        <span data-i18n="cart_tax">V.A.T (10%)</span>
         <span id="cart-tax">$0.00</span>
       </div>
       <div class="cart-summary-row">
-        <span>Service Charge (5%)</span>
+        <span data-i18n="cart_service">Service Charge (5%)</span>
         <span id="cart-service">$0.00</span>
       </div>
       <div class="cart-summary-row grand-total">
-        <span>Total Sum</span>
+        <span data-i18n="cart_total">Total Sum</span>
         <span id="cart-total">$0.00</span>
       </div>
       <div class="cart-drawer-buttons">
-        <button class="cart-btn clear-btn" id="clear-cart-btn">Clear</button>
-        <button class="cart-btn checkout-btn" id="checkout-btn">Checkout</button>
+        <button class="cart-btn clear-btn" id="clear-cart-btn" data-i18n="cart_clear">Clear</button>
+        <button class="cart-btn checkout-btn" id="checkout-btn" data-i18n="cart_checkout">Checkout</button>
       </div>
     </div>
   </div>
@@ -263,13 +277,13 @@
   <div class="overlay" id="filter-overlay"></div>
   <div class="drawer" id="filter-drawer">
     <div class="drawer-header">
-      <h3 class="drawer-title">Refine Selection</h3>
+      <h3 class="drawer-title" data-i18n="filter_title">Refine Selection</h3>
       <button class="drawer-close" id="close-filter-btn" aria-label="Close Filters">&times;</button>
     </div>
     <div class="drawer-body">
       <!-- Price Limit -->
       <div class="filter-group">
-        <h4 class="filter-group-title">Maximum Budget</h4>
+        <h4 class="filter-group-title" data-i18n="filter_budget">Maximum Budget</h4>
         <div class="price-slider-container">
           <input class="range-input" type="range" id="filter-price-slider" min="5" max="60" value="60">
           <div class="price-range-info">
@@ -281,12 +295,12 @@
 
       <!-- Specific Badges -->
       <div class="filter-group">
-        <h4 class="filter-group-title">Dietary & Style</h4>
+        <h4 class="filter-group-title" data-i18n="filter_diet">Dietary & Style</h4>
         
         <div class="toggle-item">
           <div class="toggle-label">
-            <span class="toggle-label-title">Vegetarian</span>
-            <span class="toggle-label-desc">Only display plant-based creations</span>
+            <span class="toggle-label-title" data-i18n="filter_veg_title">Vegetarian</span>
+            <span class="toggle-label-desc" data-i18n="filter_veg_desc">Only display plant-based creations</span>
           </div>
           <label class="switch">
             <input type="checkbox" id="filter-veg">
@@ -296,8 +310,8 @@
 
         <div class="toggle-item">
           <div class="toggle-label">
-            <span class="toggle-label-title">Spicy Pleasures</span>
-            <span class="toggle-label-desc">Include dishes with spice profiles</span>
+            <span class="toggle-label-title" data-i18n="filter_spicy_title">Spicy Pleasures</span>
+            <span class="toggle-label-desc" data-i18n="filter_spicy_desc">Include dishes with spice profiles</span>
           </div>
           <label class="switch">
             <input type="checkbox" id="filter-spicy">
@@ -307,8 +321,8 @@
 
         <div class="toggle-item">
           <div class="toggle-label">
-            <span class="toggle-label-title">Michelin Popular</span>
-            <span class="toggle-label-desc">Popular guest recommendations</span>
+            <span class="toggle-label-title" data-i18n="filter_popular_title">Michelin Popular</span>
+            <span class="toggle-label-desc" data-i18n="filter_popular_desc">Popular guest recommendations</span>
           </div>
           <label class="switch">
             <input type="checkbox" id="filter-popular">
@@ -318,8 +332,8 @@
 
         <div class="toggle-item">
           <div class="toggle-label">
-            <span class="toggle-label-title">New Arrivals</span>
-            <span class="toggle-label-desc">Freshly prepared creations</span>
+            <span class="toggle-label-title" data-i18n="filter_new_title">New Arrivals</span>
+            <span class="toggle-label-desc" data-i18n="filter_new_desc">Freshly prepared creations</span>
           </div>
           <label class="switch">
             <input type="checkbox" id="filter-new">
@@ -330,8 +344,8 @@
     </div>
     <div class="drawer-footer">
       <div class="cart-drawer-buttons">
-        <button class="cart-btn clear-btn" id="reset-filters-btn">Reset</button>
-        <button class="cart-btn checkout-btn" id="apply-filters-btn">Apply</button>
+        <button class="cart-btn clear-btn" id="reset-filters-btn" data-i18n="filter_reset">Reset</button>
+        <button class="cart-btn checkout-btn" id="apply-filters-btn" data-i18n="filter_apply">Apply</button>
       </div>
     </div>
   </div>
@@ -357,24 +371,24 @@
 
           <div class="modal-specs">
             <div class="spec-item">
-              <span class="spec-label">Est. Calories</span>
+              <span class="spec-label" data-i18n="modal_calories">Est. Calories</span>
               <span class="spec-val" id="modal-calories">000 kcal</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Cooking Time</span>
+              <span class="spec-label" data-i18n="modal_time">Cooking Time</span>
               <span class="spec-val" id="modal-time">00 min</span>
             </div>
           </div>
 
           <div class="modal-lists">
             <div>
-              <h4 class="modal-list-title">Ingredients</h4>
+              <h4 class="modal-list-title" data-i18n="modal_ingredients">Ingredients</h4>
               <ul id="modal-ingredients">
                 <!-- Rendered dynamically -->
               </ul>
             </div>
-            <div>
-              <h4 class="modal-list-title">Allergens</h4>
+             <div>
+              <h4 class="modal-list-title" data-i18n="modal_allergens">Allergens</h4>
               <ul id="modal-allergens">
                 <!-- Rendered dynamically -->
               </ul>
@@ -388,12 +402,11 @@
               <span class="modal-qty-val" id="modal-qty-val">1</span>
               <button class="modal-qty-btn" id="modal-inc-qty">+</button>
             </div>
-            <button class="modal-add-btn" id="modal-add-cart-btn">Add to Selection</button>
+             <button class="modal-add-btn" id="modal-add-cart-btn" data-i18n="modal_add_selection">Add to Selection</button>
           </div>
 
-          <!-- Customer Reviews section -->
-          <div class="modal-reviews-section">
-            <h4 class="modal-reviews-title">Gastronomic Appraisals</h4>
+           <div class="modal-reviews-section">
+            <h4 class="modal-reviews-title" data-i18n="modal_appraisals">Gastronomic Appraisals</h4>
             <div class="modal-reviews-list" id="modal-reviews-list">
               <!-- Rendered dynamically -->
             </div>
@@ -408,8 +421,8 @@
   <div class="modal-container" id="qr-modal" style="max-width: 400px;">
     <button class="modal-close-btn" id="close-qr-btn" aria-label="Close QR Modal">&times;</button>
     <div class="qr-modal-body">
-      <h3 class="modal-title">Mobile Menu Sync</h3>
-      <p class="qr-desc" style="margin-top: 0.5rem;">Scan with your mobile camera to take Best Coffee And FAST FOOD with you.</p>
+      <h3 class="modal-title" data-i18n="qr_title">Mobile Menu Sync</h3>
+      <p class="qr-desc" style="margin-top: 0.5rem;" data-i18n="qr_desc">Scan with your mobile camera to take Best Coffee And FAST FOOD with you.</p>
       
       <!-- Premium inline golden SVG QR Code -->
       <div class="qr-code-wrapper">
@@ -434,13 +447,61 @@
   <!-- 14. Floating UI controls -->
   <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">▲</button>
 
+  <!-- 15. QR Code Camera Scanner Modal -->
+  <div class="modal-overlay" id="scanner-overlay"></div>
+  <div class="modal-container" id="scanner-modal" style="max-width: 480px;">
+    <button class="modal-close-btn" id="close-scanner-btn" aria-label="Close ScannerModal">&times;</button>
+    <div class="qr-modal-body">
+      <h3 class="modal-title" data-i18n="qr_scanner_title">QR Code Scanner</h3>
+      <p class="qr-desc" style="margin-top: 0.5rem;" data-i18n="qr_scanner_desc">Scan a table QR code, menu link, or tracking ID using your camera.</p>
+      
+      <!-- Scanner reader window viewport -->
+      <div id="qr-reader" style="width: 100%; border-radius: 12px; overflow: hidden; background: #0c0c0c; border: 1px solid var(--border-color); margin-top: 1.5rem;"></div>
+      
+      <div id="scanner-error" class="scanner-error" style="color: #d9534f; margin-top: 1rem; font-size: 0.85rem; font-weight: 500;"></div>
+    </div>
+  </div>
+
+  <!-- 16. Order Tracking Status Modal -->
+  <div class="modal-overlay" id="tracking-overlay"></div>
+  <div class="modal-container" id="tracking-modal" style="max-width: 450px;">
+    <button class="modal-close-btn" id="close-tracking-btn" aria-label="Close Tracking Modal">&times;</button>
+    <div class="qr-modal-body">
+      <h3 class="modal-title" data-i18n="tracking_title">Order Tracking</h3>
+      <p class="qr-desc" style="margin-top: 0.5rem;" data-i18n="tracking_desc">Track the real-time preparation status of your delicacies.</p>
+      
+      <div class="tracking-card" style="width: 100%; text-align: left; background: var(--bg-glass-card); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--border-radius-md); margin-top: 1.5rem; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+          <span style="font-weight: 600; color: var(--text-secondary);">Order ID</span>
+          <span id="tracking-order-id" style="font-family: monospace; font-weight: 700; color: var(--gold-primary);">#000000</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+          <span style="font-weight: 600; color: var(--text-secondary);" data-i18n="tracking_table">Table</span>
+          <span id="tracking-table-num" style="font-weight: 700;">N/A</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+          <span style="font-weight: 600; color: var(--text-secondary);" data-i18n="tracking_status">Status</span>
+          <span id="tracking-status-text" style="font-weight: 700; color: var(--gold-primary);">Preparing...</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="font-weight: 600; color: var(--text-secondary);" data-i18n="tracking_eta">Est. Delivery</span>
+          <span id="tracking-eta-text" style="font-weight: 700;">15 min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JS Scripts inclusion (Dependencies first) -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
   <script src="js/menu-data.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/search.js"></script>
   <script src="js/filter.js"></script>
+  <script src="js/scanner.js"></script>
   <script src="js/app.js"></script>
+  <!-- languages.js MUST load after app.js so App object is defined -->
+  <script src="js/languages.js"></script>
 </body>
 </html>
